@@ -1,0 +1,25 @@
+fill(0, 0, 0);
+ellipse(200, 200, 375, 375);
+fill(60, 0, 255);
+triangle(200, 104, 280, 280, 120, 280);
+fill(255, 255, 255);
+var answer = floor(random(1, 5));
+if (answer  ===  5) {
+    text("Stop", 176, 200);
+    text("No", 159, 229); 
+}
+
+ else if (answer === 1) {
+    text("Please", 176, 200);
+    text("eat", 159, 229); 
+} else if (answer  ===  2) {
+    text("Cut a boar", 176, 200);
+    text("Cause you're a store", 159, 229); 
+} else if (answer  ===  3) {
+    text("Yes", 176, 200);
+    text("No", 159, 229); 
+} else if (answer  ===  4) {
+    text("Maybe", 176, 200);
+    text("So", 159, 229); 
+}
+
