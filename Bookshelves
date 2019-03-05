@@ -1,0 +1,55 @@
+var book = [
+ {
+    title: "The Giver",
+    author: "Lois Lowry",
+    stars: 4,
+    isGood: true,
+    color: [50,233,79],
+ },
+ {
+  title: "Ender's game",
+  author: "Orson Scott Card",
+  stars: 3,
+  isGood: true,
+  color: [40,40,100]
+ },
+ {title: "Domination",
+ author: "Not real",
+ stars: 2,
+ isGood: false,
+ color: [20,20,20]
+ },
+];
+
+// draw shelf
+fill(173, 117, 33);
+rect(0, 120, width, 10);
+fill(173, 117, 33);
+rect(0, 320, width, 10);
+var spacing = 100;
+// draw one book
+var u = 1;
+for(var i = 0; i< 2; i++){
+    fill(book[i].color[0],book[i].color[1],book[i].color[2]);
+    rect(i*spacing + 10, 20, 90,  + 100);
+    fill(0, 0, 0);
+    text(book[i].title, i*spacing + 15, u + 29, 70, 100);
+    text(book[i].author, i*spacing + 15, u + 60, 70, 100);
+    for (var k = 0; k < book[i].stars; k++) {
+    image(getImage("cute/Star"), i* spacing +13 + k * 20, 90, 20, 30);
+    }
+}
+u+= 200;
+for(var i = 2; i < 3; i++){
+    fill(book[i].color[0],book[i].color[1],book[i].color[2]);
+    rect(i*spacing + 10, u+ 20, 90,  + 100);
+    fill(0, 0, 0);
+    text(book[i].title, i*spacing + 15, u + 29, 70, 100);
+    text(book[i].author, i*spacing + 15, u + 60, 70, 100);
+    for (var k = 0; k < book[i].stars; k++) {
+    image(getImage("cute/Star"), i* spacing +13 + k * 20, u+ 90, 20, 30);
+    }
+}
+
+
+
